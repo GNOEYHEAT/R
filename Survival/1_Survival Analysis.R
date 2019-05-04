@@ -52,4 +52,6 @@ data <- data.frame(v1 = c(19,24,8,17,17,34,34,4,17,10,5,27,21,18,16,7,12,24,8,8,
                    v2 = c(1,0,1,0,0,0,0,1,0,1,1,0,0,0,0,1,0,1,1,0,1,0,0,0,0,0,1,0,1,0),
                    v3 = c(rep(1, 11), rep(2, 19)),
                    v4 = c(1,1,1,1,1,1,2,2,2,3,3,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3))
-survdiff(Surv(data$v1, data$v2) ~ data$v3 + strata(data$v4))
+
+strata_diff <- survdiff(Surv(data$v1, data$v2) ~ data$v3 + strata(data$v4))
+strata_diff
