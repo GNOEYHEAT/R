@@ -1,2 +1,2 @@
-# R tutorial
+# R
 From the base 'ABC'
